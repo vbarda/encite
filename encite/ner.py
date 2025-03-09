@@ -156,6 +156,18 @@ def find_entities(
     entity_types: list[str],
     system_prompt: str = NER_SYSTEM_PROMPT,
 ) -> list[Entity]:
+    """Find named entities in text using Claude's citations feature.
+
+    Args:
+        model: ChatAnthropic model instance to use for entity recognition
+        text: Input text to analyze
+        entity_types: List of entity types to look for (e.g., ["person", "company"])
+        system_prompt: Custom system prompt to use (defaults to NER_SYSTEM_PROMPT)
+
+    Returns:
+        List of Entity objects containing the found entities with their types,
+        names and character positions in the original text
+    """
     chunks = _preprocess_text(text)
     model_input = _format_model_input(chunks, system_prompt, entity_types)
     response = model.invoke(model_input)
