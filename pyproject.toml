@@ -1,0 +1,15 @@
+[project]
+name = "encite"
+version = "0.1.0"
+description = "Named Entity Recognition using Claude Citations"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain-anthropic>=0.3.9",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "ruff>=0.9.10",
+]
