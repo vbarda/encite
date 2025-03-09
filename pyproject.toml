@@ -4,7 +4,7 @@ build-backend = "pdm.backend"
 
 [project]
 name = "encite"
-version = "0.1.0"
+version = "0.1.1"
 description = "Named Entity Recognition using Claude Citations"
 readme = "README.md"
 requires-python = ">=3.12"
