@@ -10,7 +10,7 @@ ENTITY_NAME_RE = re.compile(r"<name>(.*?)</name>", re.DOTALL)
 SEPARATORS = {" ", ".", ",", "\n", "\t"}
 
 
-NER_SYSTEM_PROMPT = f"""You are a named entity recognition (NER) expert.
+NER_SYSTEM_PROMPT = """You are a named entity recognition (NER) expert.
 Extract all named entities from the provided document.
 
 INSTRUCTIONS:
